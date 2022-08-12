@@ -1,1 +1,152 @@
 /* You can add global styles to this file, and also import other style files */
+:root{
+    --blue-1:#3C429E;
+    --blue-2:#4C52AD;
+    --yellow:#FAC742;
+    --white:#FFF;
+    --grey-1:#EDEDED;
+    --shadow-dark:rgba(0,0,0,0.3);
+    --shadow-light:rgba(255,255,255,0.1);
+
+}
+ 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;/*it calculaye the width and height by padding + height +border*/
+}
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size:15px ;
+    width: 100%;
+    height: 100vh;
+ 
+    background-color:var(--blue-1);
+    /*background-repeat: no-repeat;*/
+    display: flex;
+    justify-content: center;/*both justify centre or align items use together*/
+    align-items: center;
+}
+
+
+.container{
+    width: 400px;
+    height: 90vh;
+    background-color: var(--blue-2);
+    border-radius: 20px;
+    box-shadow: 10px 10p 10px var(--shadow-dark);
+   
+}
+.upper{
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 50%;
+    border-top-left-radius: 20px;
+    border-top-right-radius:20px ;
+}
+.today{
+    font-size: 17px;
+    color: var(--white);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.lower{
+    color: var(--white);
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 50%;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+}
+.upper img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.weather-data{
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background-color: var(--shadow-dark);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.location{
+    color: var(--white);
+    font-size: 1.6em;
+    text-align: center;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;}
+
+.temp{
+    color: var(--white);
+    font-size: 4em;
+    text-align: center;
+    font-weight: 900;
+
+}
+.info-container{
+    flex: 1;
+   
+    background-color: var(--shadow-light);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    margin-top: 1em;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.info-block{
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+
+}
+.info-inside{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.info-inside img {
+    width: 2em;
+
+}
+.info-inside span{
+    color: var(--white);
+    font-size: 0.8em;
+}
+.info-block-value{
+    width: 50%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: var(--white);
+
+}
+.search {
+    margin-bottom: 1em;
+    text-align: center;
+  
+    
+  }
+  
+  .search input {
+    background-color: var(--shadow-light);
+    outline: none;
+    border: none;
+    border-radius: 20px;
+    padding: 1em;
+    color: var(--grey-1);
+    font-size:1em;
+    text-align: center;
+  }
